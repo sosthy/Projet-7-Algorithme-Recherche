@@ -1,0 +1,231 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+$list-group-hover-bg: #FFD15B;
+$list-group-border-radius: 0px;
+$list-group-border-color: none;
+$list-group-border-width: 0px;
+$list-group-border-radius: 0px 0px .5rem .5rem;
+
+// Custom dropdown
+$dropdown-padding-y: 0rem;
+$dropdown-border-radius: 0px 0px .5rem .5rem;
+$dropdown-border-width: 0rem;
+
+// 
+$list-group-action-active-bg: #FFD15B;
+$list-group-active-color: var(--bs-body-color);
+$list-group-active-bg: #FFD15B;
+
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// Then add additional custom code here
+
+header {
+    height: 667px;
+    position: relative;
+
+    nav {
+        width: 100%;
+        position: absolute;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    > img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    div#header-input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    div#i-search {
+        position: relative;
+
+        #i-clear {
+            position: absolute;
+            top: 15px;
+            right: 70px;
+            color: #1B1B1B;
+            opacity: .5;
+        }
+
+        #i-icon {
+            background-color: #1B1B1B;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    }
+}
+
+:focus-visible {
+    outline: none;
+}
+
+input {
+    border: none;
+}
+
+body {
+    background: #ebebeb;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    width: 280px;
+}
+
+.dropdown-filter-input-search {
+    display: flex;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
+
+.dropdown-filter-input-search i {
+    color: #7A7A7A;
+    font-weight: 100;
+    opacity: .5;
+}
+
+.dropdown-filter {
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    margin-right: .4rem;
+}
+
+.dropdown-filter button {
+    position: relative;
+    padding: 10px 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.dropdown-filter button i {
+    z-index: 99;
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+}
+
+.dropdown-filter button span::first-letter {
+    text-transform: capitalize;
+}
+
+#tags-render button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem .8rem;
+    margin-right: .8rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: #FFD15B;
+    outline: none;
+}
+
+#tags-render button i {
+    margin-left: .8rem;
+}
+
+#recettes-render li, .recette-name {
+    text-transform: lowercase;
+}
+
+.dropdown-filter a:first-letter,
+.recette-name:first-letter,
+.ing-cel span::first-letter,
+#tags-render span:first-letter, 
+#recettes-render li:first-letter  {
+    text-transform: uppercase;
+}
+
+.recette-item {
+    width: 100%;
+}
+
+.recette-item .recette-header {
+    position: relative;
+    height: 253px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    span {
+        position: absolute;
+        display: inline-block;
+        top: .8rem;
+        right: .8rem;
+        z-index: 2;
+        background-color: #FFD15B;
+        border-radius: 1rem;
+        text-wrap: nowrap;
+        font-size: .6rem;
+    }
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.manrope-regular {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.fixed-title {
+    color: #7A7A7A;
+    font-size: .86rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 16.39px;
+}
+
+.recette-description {
+    height: 100px;
+    overflow: hidden;
+}
+
+.ing-cel span {
+    font-size: .84rem;
+}
+
+.ing-cel span {
+    text-transform: lowercase;
+}

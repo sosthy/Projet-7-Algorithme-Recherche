@@ -1,0 +1,35 @@
+{
+  "name": "projet-07",
+  "version": "1.0.0",
+  "description": "Les petits plats : Plateforme de recherche de recette de cuisine",
+  "keywords": [
+    "cuisine",
+    "recette"
+  ],
+  "author": "Sosthène NOUEBISSI",
+  "license": "MIT",
+  "scripts": {
+    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules assets/scss/:assets/css/",
+    "css-prefix": "postcss --replace assets/css/style.css --use autoprefixer --map",
+    "css-lint": "stylelint assets/scss/",
+    "css": "npm-run-all css-compile css-prefix",
+    "watch": "nodemon -e html,scss -x \"npm run css\"",
+    "server": "sirv --dev --no-clear --port 3000",
+    "start": "npm-run-all --parallel watch server",
+    "test": "npm-run-all css-lint css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "nodemon": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.40",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.8",
+    "sirv-cli": "^2.0.2",
+    "stylelint": "^16.8.1",
+    "stylelint-config-twbs-bootstrap": "^14.2.0"
+  }
+}
