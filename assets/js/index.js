@@ -479,6 +479,8 @@ const handleChangeSearchInputForm = ($event) => {
     }
 
     clearMainSearch.classList.add("d-none")
+    resetComponents();
+    lancerRecherche(APP.recettes, motCle)
 }
 
 
@@ -487,6 +489,9 @@ const handleChangeSearchInputForm = ($event) => {
     lancerRecherche(APP.recettes, "");
     const searchForm = document.getElementById("search-form");
     searchForm.addEventListener("submit", handleSubmitSearchForm)
+
+    const searchMainButtonSearch = document.getElementById("i-icon");
+    searchMainButtonSearch.addEventListener("click", handleSubmitSearchForm)
 
     const searchInputForm = document.querySelector("input[name='i-search']");
     searchInputForm.addEventListener("keyup", handleChangeSearchInputForm)
@@ -497,6 +502,7 @@ const handleChangeSearchInputForm = ($event) => {
     { 
         searchInputForm.value = ""; 
         searchInputForm.dispatchEvent(new Event("keyup"))
+        searchInputForm.focus()
     })
 
     const ingredientsISearch = document.getElementById("ingredients-i-search");
