@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci  # Utilisez npm ci pour une installation plus rapide et stable
       - name: Build project
-        run: npm start
+        run: npm run css
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
